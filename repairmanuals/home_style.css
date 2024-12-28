@@ -1,0 +1,277 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #FF9D3D; /* Light brown / rust color */
+    color: #FFFFFF; /* White text color for contrast */
+    padding: 1rem;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    /* flex-wrap: wrap; Allow header items to wrap */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo {
+    height: 50px; /* Adjust the height as needed */
+    margin-right: 10px;
+}
+
+h1 {
+    margin: 0;
+    color: #FFFFFF; /* White text for the header title */
+}
+
+.button-container {
+    margin-top: 10px; /* Margin for spacing in mobile view */
+}
+
+.header-button {
+    background-color: #FFFFFF;
+    /* color: #333333; */
+    border: 2px solid #ea5916; /* Rust border */
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    white-space: nowrap; /* Prevent text from wrapping */
+    max-width: 100%; /* Ensure the button stays within the container */
+}
+.header-button a{
+    text-decoration: none;
+}
+.header-button-wel {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-family: "Times New Roman", Times, serif;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    max-width: 100%;
+    border: none;
+}
+
+.header-button:hover{
+    background-color: #B5651D;
+    border: 1px solid #fff;
+    color: #fff !important;
+}
+
+footer {
+    background-color: #FF9D3D;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-section {
+    background-image: url('img1.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 1rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.main-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.column {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    z-index: 2;
+    position: relative;
+}
+
+h2 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+.explore-button {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.explore-button:hover {
+    background-color: #ffffff;
+    color: #333333;
+    border-color: #333333;
+}
+
+.main-content-2 {
+    background-color: #FBFBFB;
+    padding: 4rem 1rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: #E4B98B; /* Light rust color related to header */
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.grid-item h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.grid-item p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.grid-item-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.grid-button {
+    background-color: transparent;
+    border: 2px solid #B5651D;
+    color: #B5651D;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.grid-button:hover {
+    background-color: #B5651D;
+    color: #FFFFFF;
+    border-color: #8C4A1E;
+}
+
+/* Mobile View (412px width) */
+@media (max-width: 412px) {
+    body {
+        padding: 0;
+    }
+
+    header {
+        flex-direction: column; /* Stack the header items vertically */
+        align-items: center;
+        padding: 1rem;
+        width: 100%; /* Ensure header fits within screen width */
+    }
+
+    .logo-container {
+        justify-content: center;
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Reduced gap for a more compact view */
+        align-items: center;
+        width: 100%; /* Ensure buttons are within screen width */
+        overflow: hidden; /* Prevent overflow */
+    }
+
+    .header-button {
+        width: 90%; /* Ensure buttons take up 90% of the screen width */
+        padding: 10px 20px; /* Adjust padding for small screens */
+        font-size: 0.9rem; /* Adjust button font size */
+        text-align: center; /* Center text within buttons */
+        max-width: 100%; /* Ensure the button stays within the container */
+    }
+
+    .main-section {
+        padding: 2rem 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .main-section h2 {
+        font-size: 2rem; /* Reduce font size for smaller screens */
+    }
+
+    .main-section p {
+        font-size: 1.2rem; /* Reduce font size for better readability */
+    }
+
+    .explore-button {
+        padding: 10px 20px; /* Adjust button padding */
+        font-size: 1rem; /* Adjust button font size */
+    }
+
+    .main-content-2 {
+        padding: 2rem 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Stack grid items vertically */
+        gap: 15px; /* Reduced gap */
+    }
+
+    .grid-item {
+        padding: 1rem; /* Adjust padding inside grid items */
+    }
+
+    .grid-item h3 {
+        font-size: 1.4rem; /* Reduce font size */
+    }
+
+    .grid-item p {
+        font-size: 1rem; /* Reduce font size */
+    }
+
+    .grid-button {
+        padding: 8px 15px; /* Adjust button size */
+        font-size: 0.9rem; /* Reduce font size */
+    }
+}

@@ -1,0 +1,301 @@
+/* comment_style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('comment.jpg'); /* Light beige background */
+    color: #3c3c3c; /* Dark gray text color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #8c4f3f; /* Warm medium brown */
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.button-container {
+    display: flex;
+}
+
+.header-button {
+    background-color: #fff;
+    color: #8c4f3f; /* Medium brown text */
+    border: 1px solid #8c4f3f;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+    transition: all 0.3s ease-in-out; /* Add transition for smooth hover effect */
+    border-radius: 8px;
+}
+
+.header-button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header-button:hover {
+    background-color: #7a3d2f; /* Darker brown on hover */
+    color: white;
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+main {
+    
+    padding: 20px;
+    width: 90%; /* Make main content width more flexible */
+    max-width: 800px;
+    background-color:transparent; /* White background for the main content */
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex-grow: 1;
+    backdrop-filter: blur(30px);
+}
+
+h2 {
+    color: #7a3d2f; /* Darker brown for the header */
+    text-align: center;
+    font-size: 18px;
+}
+
+.ask-button {
+    background-color: #7a3d2f; /* Dark brown */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+}
+
+.ask-button:hover {
+    background-color: #6c2f1f; /* Even darker brown */
+    transform: translateY(-4px); /* Lift effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+.question {
+    background-color: #f7e0c3; /* Light beige background for questions */
+    border: 1px solid #d7b49f; /* Light brown border */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 750px;
+}
+
+.question p {
+    margin: 0 0 10px;
+}
+
+.show-answers-btn {
+    background-color: #7a3d2f; /* Dark brown */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+}
+
+.show-answers-btn:hover {
+    background-color: #6c2f1f; /* Even darker brown */
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.answers {
+    margin-top: 10px;
+    padding-left: 20px;
+    width: 100%;
+}
+
+.answers p {
+    margin: 5px 0;
+}
+
+form {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align the form to the left */
+}
+
+textarea {
+    width: 100%; /* Ensure it stays within the width of the content area */
+    max-width: 600px; /* Reduced the width of the answer box */
+    height: 80px;
+    padding: 10px;
+    border: 1px solid #d7b49f; /* Light brown border for textarea */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background-color: #f7e0c3; /* Light beige background for textarea */
+    resize: vertical; /* Allow resizing vertically only */
+}
+
+button[type="submit"] {
+    background-color: #7a3d2f; /* Dark brown */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px; /* Rounded corners for button */
+}
+
+button[type="submit"]:hover {
+    background-color: #6c2f1f; /* Even darker brown */
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+footer {
+    background-color: #8c4f3f; /* Warm medium brown for footer */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    margin-top: auto;
+}
+
+/* Responsive Design for Smaller Screens */
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .logo {
+        height: 35px;
+    }
+
+    .header-button {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+    .ask-button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    main {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .question {
+        padding: 12px;
+    }
+
+    .show-answers-btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    textarea {
+        width: 100%;
+        max-width: 100%; /* Ensure the text area fits */
+    }
+
+    button[type="submit"] {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+}
+
+/* Mobile View Adjustments (Max width 480px) */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    .header-button {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        margin: 5px 0;
+    }
+
+    .ask-button {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    main {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .question {
+        padding: 12px;
+    }
+
+    textarea {
+        width: 100%;
+        height: 100px;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        padding: 10px;
+    }
+}

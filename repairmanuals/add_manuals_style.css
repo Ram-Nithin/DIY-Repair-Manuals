@@ -1,0 +1,206 @@
+/* Define the light brown color palette */
+:root {
+    --primary-color: #8B4513; /* Saddle Brown */
+    --secondary-color: #A0522D; /* Sienna */
+    --background-color: #F5F5DC; /* Beige */
+    --text-color: #5D4037; /* Brown */
+    --button-color: #D2B48C; /* Tan */
+    --button-hover-color: #C0A080; /* Lightened Tan */
+    --button-text-color: white;
+}
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-image: 'add.jpg';
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    width: 100%; /* Ensure the header spans the full width */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 20px;
+}
+
+.button-container {
+    display: flex;
+}
+
+.header-button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.header-button a {
+    color: var(--button-text-color);
+    text-decoration: none;
+}
+
+.header-button:hover {
+    background-color: var(--button-hover-color);
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--background-color);
+}
+
+.form-container {
+    max-width: 400px; /* Set a maximum width for the form */
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="url"],
+textarea {
+    width: 100%;
+    max-width: 350px; /* Reduce the width of the input boxes */
+    padding: 10px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="url"]:focus,
+textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+button.submit-button {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button.submit-button:hover {
+    background-color: var(--button-hover-color);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Media Queries for Mobile View */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+        align-items: flex-start;
+    }
+    .logo-container {
+        margin-bottom: 10px;
+    }
+    .button-container {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .form-container {
+        max-width: 90%; /* Adjust form width for smaller screens */
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    input[type="text"],
+    input[type="url"],
+    textarea {
+        max-width: 100%; /* Allow the form elements to expand fully */
+    }
+
+    footer {
+        font-size: 14px; /* Slightly reduce font size for mobile */
+    }
+}
+
+/* Additional media query for very small screens (like portrait mobile devices) */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    .header-button {
+        padding: 8px 15px; /* Reduce button size for small screens */
+    }
+
+    button.submit-button {
+        padding: 8px 15px; /* Reduce button size for small screens */
+    }
+
+    .form-container {
+        padding: 15px;
+    }
+
+    footer {
+        font-size: 12px; /* Adjust footer font size for very small screens */
+    }
+}
